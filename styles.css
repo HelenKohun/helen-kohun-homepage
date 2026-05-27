@@ -347,8 +347,6 @@ main {
   }
 }
 
-/* Внесенный изменения */
-
 /* Mobile */
 
 @media (max-width: 768px) {
@@ -646,6 +644,176 @@ main {
     margin-top: 3.1rem;
   }
 }
+/* Path section */
+
+.path__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6.25rem 1.25rem;
+  min-height: 80vh;
+}
+
+.path__wrapper > h1 {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5.6rem;
+  font-weight: 800;
+  letter-spacing: 0.56rem;
+  color: var(--text-heading);
+  animation-name: journey;
+  animation-duration: 2s;
+}
+
+.path__container {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.path__main-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.6rem;
+  margin-bottom: 80px;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  animation-name: journey;
+  animation-duration: 2s;
+}
+.path__text-element {
+  width: 35%;
+  padding: 10px;
+}
+
+#first-letter::first-letter {
+  font-size: 5rem;
+
+  float: left;
+  margin-right: 8px;
+  line-height: 0.5;
+  color: var(--bg-accent);
+}
+
+.path__decor-cicle {
+  position: relative;
+  left: 49%;
+  bottom: 60px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--bg-accent);
+  opacity: 0.7;
+}
+
+.path__certificates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 0;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  animation-name: journey-cert;
+  animation-duration: 2s;
+}
+
+.path__certificate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 350px;
+  background-color: var(--bg-main);
+  box-shadow: 2px 2px 5px rgba(58, 10, 30, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.path__certificate-container:hover {
+  transform: scale(1.1);
+}
+
+.path__certificate-text {
+  flex: 1;
+}
+
+.path__certificate-text h3 {
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.path__certificate-text p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.9rem;
+  text-align: justify;
+  line-height: 1.3rem;
+  color: var(--text-main);
+}
+
+.path__certificate-image {
+  width: 300px;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+}
+
+.path__certificate-image img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes journey {
+  from {
+    opacity: 0;
+    transform: translateY(-0.63rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes journey-cert {
+  from {
+    opacity: 0;
+    transform: translateY(0.63rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Path section */
+
+@media (max-width: 768px) {
+  .path__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .path__wrapper > h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2px;
+  }
+
+  .path__main-text {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .path__text-element {
+    width: 100%;
+    padding: 10px;
+  }
+}
 
 /* SELECTED works*/
 .works__container {
@@ -939,4 +1107,128 @@ footer p {
 
   /*Links & buttons*/
   --link-accent: #6fcf97;
+}
+
+/* Progress bar */
+
+/* From Uiverse.io by alexruix */
+.loader {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.loader-text {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  color: var(--bg-header);
+  animation: text_713 3.5s ease both infinite;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.load {
+  background-color: var(--text-main);
+  border-radius: 50px;
+  display: block;
+  height: 16px;
+  width: 16px;
+  bottom: 0;
+  position: absolute;
+  transform: translateX(64px);
+  animation: loading_713 3.5s ease both infinite;
+}
+
+.load::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-header-nav);
+  border-radius: inherit;
+  animation: loading2_713 3.5s ease both infinite;
+}
+
+@keyframes text_713 {
+  0% {
+    letter-spacing: 1px;
+    transform: translateX(0px);
+  }
+
+  40% {
+    letter-spacing: 2px;
+    transform: translateX(26px);
+  }
+
+  80% {
+    letter-spacing: 1px;
+    transform: translateX(32px);
+  }
+
+  90% {
+    letter-spacing: 2px;
+    transform: translateX(0px);
+  }
+
+  100% {
+    letter-spacing: 1px;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes loading_713 {
+  0% {
+    width: 16px;
+    transform: translateX(0px);
+  }
+
+  40% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+
+  80% {
+    width: 16px;
+    transform: translateX(64px);
+  }
+
+  90% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+
+  100% {
+    width: 16px;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes loading2_713 {
+  0% {
+    transform: translateX(0px);
+    width: 16px;
+  }
+
+  40% {
+    transform: translateX(0%);
+    width: 80%;
+  }
+
+  80% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+
+  90% {
+    width: 80%;
+    transform: translateX(15px);
+  }
+
+  100% {
+    transform: translateX(0px);
+    width: 16px;
+  }
 }

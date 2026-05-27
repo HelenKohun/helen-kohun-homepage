@@ -35,6 +35,7 @@ The goal of this project is to present my development work in a clean and access
 - Improve mobile responsiveness
 - Enhance UI/UX design
 - Add new projects as the portfolio grows
+- Refactor styles into modular, reusable sections to improve structure and maintainability
 
 ---
 
