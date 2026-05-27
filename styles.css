@@ -709,6 +709,17 @@ main {
   opacity: 0.7;
 }
 
+.path__decor-cicle2 {
+  position: relative;
+  left: 49%;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--bg-accent);
+  opacity: 0.7;
+}
+
 .path__certificates {
   display: flex;
   flex-wrap: wrap;
@@ -1026,6 +1037,7 @@ address dt {
   font-family: "Source Sans 3", sans-serif;
   text-transform: uppercase;
   color: #3a0a1e;
+  margin-bottom: 15px;
 }
 
 address dd a {
@@ -1091,22 +1103,6 @@ footer {
 }
 footer p {
   padding-top: 20px;
-}
-
-.dark-theme {
-  /*Background*/
-  --bg-main: #1b1418;
-  --bg-secondary: #2a1d23;
-  --bg-header: #2f1c25;
-  --bg-accent: #4f8f6f;
-
-  /*Text*/
-  --text-main: #f2e9ee;
-  --text-heading: #e4b6c8;
-  --text-light: #cfdd9d;
-
-  /*Links & buttons*/
-  --link-accent: #6fcf97;
 }
 
 /* Progress bar */
@@ -1231,4 +1227,20 @@ footer p {
     transform: translateX(0px);
     width: 16px;
   }
+}
+
+.dark-theme {
+  /*Background*/
+  --bg-main: #1b1418;
+  --bg-secondary: #2a1d23;
+  --bg-header: #2f1c25;
+  --bg-accent: #4f8f6f;
+
+  /*Text*/
+  --text-main: #f2e9ee;
+  --text-heading: #e4b6c8;
+  --text-light: #cfdd9d;
+
+  /*Links & buttons*/
+  --link-accent: #6fcf97;
 }
