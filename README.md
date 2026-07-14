@@ -42,3 +42,6 @@ The goal of this project is to present my development work in a clean and access
 ## 👩‍💻 Author
 
 **Helen Kohun**
+
+- GitHub: https://github.com/HelenKohun
+- LinkedIn: https://www.linkedin.com/in/olena-kohun-a800a8305/
