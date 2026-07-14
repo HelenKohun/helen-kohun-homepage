@@ -911,6 +911,12 @@ main {
   color: #cfdd9d;
 }
 
+.works__stack {
+  min-height: 60px;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
 .works__btn-d {
   font-family: "Source Sans 3", sans-serif;
   border: none;
